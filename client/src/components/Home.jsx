@@ -11,11 +11,11 @@ export default function Home() {
   const [state, setState] = useState(true)
 
   function handleFilterByDiets(e){
-    e.preventDefault();
+    
     dispatch(filterByDiet(e.target.value));
   }
   function handleOrderByName(e){
-    e.preventDefault();
+    
     dispatch(filterByName(e.target.value));
     state ? setState(false) : setState(true)
   }

@@ -13,11 +13,6 @@ switch(action.type){
             recipes: action.payload,
             allRecipes: action.payload
         }
-    case 'GET_DIETS':
-        return{
-            ...state,
-            diets:action.payload
-        }
     case 'FILTER_BY_DIET':
         const allRecipes = state.allRecipes;
         const stateFiltered = action.payload === 'all' ? allRecipes : allRecipes.filter(recipe => {
@@ -67,6 +62,11 @@ switch(action.type){
         return {
             ...state,
             recipes: filterScore
+        }
+        case 'GET_DIETS':
+        return{
+            ...state,
+            diets:action.payload
         }
 
     default:
